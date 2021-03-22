@@ -39,6 +39,7 @@ module.exports = {
         { title: 'HTTP 消息头', path: '/http/http-headers.md' }
       ],
       '/es/': [
+        { title: '继承', path: '/es/inheritance' },
         { title: 'this 指向', path: '/es/this.md'},
         { title: '防抖与节流', path: '/es/debounce-and-throttle.md'},
         { title: 'JS 执行机制', path: '/es/JS执行机制.md'}
