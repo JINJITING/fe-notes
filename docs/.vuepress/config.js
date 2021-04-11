@@ -22,7 +22,7 @@ module.exports = {
   themeConfig: {
     nav: [
       // { text: '浏览器', link: '/browser/' },
-      // { text: 'HTTP', link: '/http/' },
+      { text: 'HTTP', link: '/np/http/' },
       { text: 'ES', link: '/es/' },
       { text: 'IDE', link: '/ide/0' },
       { text: '扩展', link: '/extension/ISO-8859-1' },
@@ -32,11 +32,11 @@ module.exports = {
         { title: '浏览器架构简介', path: '/browser/architecture.md' },
         { title: '浏览器工作流程', path: '/browser/browser-work-process.md' }
       ],
-      '/http/': [
-        { title: 'URI/URL/URN', path: '/http/uri-and-url.md' },
-        { title: 'HTTP 简介', path: '/http/http.md' },
-        { title: 'HTTP 状态码', path: '/http/http-status-code.md' },
-        { title: 'HTTP 消息头', path: '/http/http-headers.md' }
+      '/np/': [
+        { title: 'HTTP 协议格式', path: '/np/http/protocol-format.md' },
+        { title: 'URI/URL/URN', path: '/np/uri-and-url.md' },
+        { title: 'HTTP 状态码', path: '/np/http/status-code.md' },
+        { title: 'HTTP 消息头', path: '/np/http/headers.md' }
       ],
       '/es/': [
         '',
@@ -66,8 +66,8 @@ module.exports = {
         { title: 'JS 执行机制', path: '/es/JS执行机制.md'}
       ],
       '/ide/': [
-        { title: 'Git 基础命令', path: '/ide/git-1.md' },
-        { title: 'Git 命令（二）', path: '/ide/git-2.md' },
+        { title: 'Git 基础命令', path: '/ide/git/1.md' },
+        { title: 'Git 命令（二）', path: '/ide/git/2.md' },
         { title: 'Shell', path: '/ide/shell-0.md' },
         { title: 'travisCI', path: '/ide/travisCI-0.md' },
       ]
