@@ -198,7 +198,7 @@ let clone0 = createAnother(objOrigin)
 + 适用主要关注对象，而不在乎类型和构造函数的场景
 + 问题：给对象添加方法，每次都要重新创建方法，函数不能复用
 
-## 6. 寄生组合(Parasitic Combination)继承
+## 6. 寄生组合继承
 基本思路：不通过调用父类构造函数给子类原型赋值，而是取父类原型的一个副本。（使用寄生式来继承父类原型，然后将返回的新对象赋值给子类原型）
 ```js
 function inheritPrototype(subType, superType) {

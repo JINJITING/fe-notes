@@ -23,7 +23,7 @@ module.exports = {
     nav: [
       // { text: '浏览器', link: '/browser/' },
       // { text: 'HTTP', link: '/http/' },
-      { text: 'JS/ES', link: '/es/0' },
+      { text: 'JS/ES', link: '/es/index' },
       { text: 'IDE', link: '/ide/0' },
       { text: '扩展', link: '/extension/ISO-8859-1' },
     ],
@@ -39,7 +39,14 @@ module.exports = {
         { title: 'HTTP 消息头', path: '/http/http-headers.md' }
       ],
       '/es/': [
-        { title: '继承', path: '/es/inheritance' },
+        '',
+        {
+          title: '面向对象',
+          children: [
+            { title: '继承', path: '/es/1_inheritance' },
+            { title: '类', path: '/es/1_classes' },
+          ]
+        },
         { title: 'this 指向', path: '/es/this.md'},
         { title: '防抖与节流', path: '/es/debounce-and-throttle.md'},
         { title: 'JS 执行机制', path: '/es/JS执行机制.md'}

@@ -5,6 +5,7 @@
 + ES404：JSON 规范
 + ES414：规定了和 ECMAScript 相关的标准有哪些（即上述 3 条）
 
-## ES 知识
+### ES 知识
 + 面向对象（Object-Oriented）
-  - [继承/Inheritance](inheritance.md)
+  - [继承/Inheritance](1_inheritance.md)
+  - [类/Class](1_classes.md)
