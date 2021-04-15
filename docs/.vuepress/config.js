@@ -23,7 +23,7 @@ module.exports = {
     nav: [
       // { text: '浏览器', link: '/browser/' },
       // { text: 'HTTP', link: '/http/' },
-      { text: 'JS/ES', link: '/es/index' },
+      { text: 'JS/ES', link: '/es/' },
       { text: 'IDE', link: '/ide/0' },
       { text: '扩展', link: '/extension/ISO-8859-1' },
     ],
@@ -43,8 +43,9 @@ module.exports = {
         {
           title: '面向对象',
           children: [
-            { title: '继承', path: '/es/1_inheritance' },
-            { title: '类', path: '/es/1_classes' },
+            { title: '创建对象', path: '/es/1-object-creation' },
+            { title: '继承', path: '/es/1-inheritance' },
+            { title: '类', path: '/es/1-classes' },
           ]
         },
         { title: 'this 指向', path: '/es/this.md'},
