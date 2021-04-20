@@ -23,13 +23,10 @@ function createPerson(name, age) {
 let p1 = createPerson('first', 1)
 let p2 = createPerson('second', 2)
 ```
-### 2.1 问题
-+ 返回结果是对象，没有解决对象标识问题，即无法判断创建的对象是什么类型
+**问题**：无法判断创建的对象是什么类型，返回结果是对象
 
 ## 3. 构造函数模式
-构造函数模式（The Function Constructor Pattern）：以函数的形式为自己的对象类型定义属性和方法。
-
-**注意**：函数首字母大写。
+构造函数模式（The Function Constructor Pattern）：以函数的形式为自己的对象类型定义属性和方法。**注意**：函数首字母大写。  
 ```js
 function Person(name, age) {
   this.name = name
@@ -74,9 +71,36 @@ person1.nums.push(1)
 console.log(person1.sayName == person2.sayName) // true
 console.log(person2.nums) // [1]
 ```
-### 4.1 优缺点
-+ 定义的方法只创建一遍，都在原型上，由实例共享（优点）
-+ 定义的属性由所有实例共享（缺点）
+
+### 4.1 原型优化
+```js
+function Plant() {}
+Plant.prototype = {
+  // 如果不设置 constructor，会重写默认的 ptototype
+  constructor: Plant,
+  name: 'plant',
+  showName: function () {
+    console.log(this.name)
+  }
+}
+// 以上方法设置 constructor 会创建[[Enumerable]]为 true 的属性（原生 constructor 不可枚举）
+
+function Person() {}
+Person.prototype = {
+  name: 'person',
+  logName() {
+    console.log(this.name)
+  }
+}
+// 恢复 constructor
+Object.defineProperty(Person.prototype, 'constructor', {
+  enumerable: false,
+  value: Person,
+})
+```
+### 4.2 优缺点
++ 优点：定义的方法只创建一遍，都在原型上，由实例共享
++ 缺点：定义的属性由所有实例共享；不能初始化参数
 
 ## 5. 组合模式
 组合使用构造函数模式和原型模式：实例属性在构造函数中定义,实例共享属性 constructor 和方法在原型中定义。  
@@ -99,13 +123,15 @@ console.log(p0 instanceof Person) // true
 + 不会多次创建函数
 
 ## 6. 动态原型模式
-**注意**:不能使用对象字面量重写原型。  
+**注意**：不能使用对象字面量重写原型。  
 ```js
 let count = 0
 function Person(name, age) {
   this.name = name
   this.age = age
-  if(typeof this.sayName !== 'function'){ // if 内的代码只会在初次调用构造函数时执行
+
+  // if 内的代码只会在初次调用构造函数时执行
+  if(typeof this.sayName !== 'function'){
     count += 1
     Person.prototype.sayName = function() {
       console.log(this.name)

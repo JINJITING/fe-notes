@@ -7,6 +7,7 @@
 
 ### ES 知识
 + 面向对象（Object-Oriented）
+  - [原型/Prototype](2-prototypes.md)
   - [创建对象/Object Creation](1-object-creation.md)
   - [继承/Inheritance](1-inheritance.md)
   - [类/Class](1-classes.md)

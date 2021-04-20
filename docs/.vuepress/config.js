@@ -43,6 +43,7 @@ module.exports = {
         {
           title: '面向对象',
           children: [
+            { title: '原型', path: '/es/2-prototypes' },
             { title: '创建对象', path: '/es/1-object-creation' },
             { title: '继承', path: '/es/1-inheritance' },
             { title: '类', path: '/es/1-classes' },
