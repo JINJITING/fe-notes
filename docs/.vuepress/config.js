@@ -49,6 +49,12 @@ module.exports = {
             { title: '类', path: '/es/1-classes' },
           ]
         },
+        {
+          title: '函数',
+          children: [
+            { title: '闭包', path: '/es/0-closures' },
+          ]
+        },
         { title: 'this 指向', path: '/es/this.md'},
         { title: '防抖与节流', path: '/es/debounce-and-throttle.md'},
         { title: 'JS 执行机制', path: '/es/JS执行机制.md'}

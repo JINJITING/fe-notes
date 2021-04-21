@@ -11,3 +11,5 @@
   - [创建对象/Object Creation](1-object-creation.md)
   - [继承/Inheritance](1-inheritance.md)
   - [类/Class](1-classes.md)
++ 函数
+  - [闭包/Closure](0-closures.md)
