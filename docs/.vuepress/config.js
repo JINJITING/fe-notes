@@ -23,7 +23,7 @@ module.exports = {
     nav: [
       // { text: '浏览器', link: '/browser/' },
       // { text: 'HTTP', link: '/http/' },
-      { text: 'JS/ES', link: '/es/' },
+      { text: 'ES', link: '/es/' },
       { text: 'IDE', link: '/ide/0' },
       { text: '扩展', link: '/extension/ISO-8859-1' },
     ],
@@ -40,6 +40,12 @@ module.exports = {
       ],
       '/es/': [
         '',
+        {
+          title: '变量和作用域',
+          children: [
+            { title: '变量', path: '/es/1-variables' }
+          ]
+        },
         {
           title: '面向对象',
           children: [

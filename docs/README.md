@@ -4,6 +4,6 @@
 
 + [浏览器](browser/architecture.md)
 + [HTTP](http/http.md)
-+ [JS/ES](es/index.md)
++ [ES](es/index.md)
 
 <!-- 0-record,1-study,2-share -->
