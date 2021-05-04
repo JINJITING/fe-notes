@@ -3,7 +3,7 @@ node_js:
   - v12.10.0
 branches:
   only:
-    - master
+    - main
 install:
   - yarn
 script:
@@ -12,9 +12,9 @@ deploy:
   provider: pages
   skip_cleanup: true
   local_dir: dist
-  github_token: ${travis_token}
+  github_token: ${travis_ci}
   repo: JINJITING/fe-notes
   keep_history: false
   committer_from_gh: true
   on:
-    branch: master
+    branch: main
