@@ -29,7 +29,7 @@ Body 部分是对本次 commit 的详细描述，可以分成多行。有两个�
 
 #### 3、Footer
 只用于两种情况：
-**1）不兼容变动e**：如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。
+**1）不兼容变动**：如果当前代码与上一个版本不兼容，则 Footer 部分 以BREAKING CHANGE 开头，后面是对变动的描述、以及变动理由和迁移方法。
 **2）关闭 Issue**：如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
 
 #### 4、Revert
