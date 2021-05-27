@@ -68,7 +68,6 @@ module.exports = {
       '/eng/': [
         { title: 'Git 基础命令', path: '/eng/git/1.md' },
         { title: 'Git 命令（二）', path: '/eng/git/2.md' },
-        { title: 'Shell', path: '/eng/shell-0.md' },
         { title: 'travisCI', path: '/eng/travisCI-0.md' },
       ]
     },
