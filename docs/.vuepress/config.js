@@ -25,7 +25,7 @@ module.exports = {
       { text: 'HTTP', link: '/base/np/http/' },
       { text: 'ES', link: '/base/es/' },
       { text: '工程化', link: '/eng/' },
-      { text: '其他', link: '/other/ISO-8859-1' },
+      { text: '备忘录', link: '/memo/' },
     ],
     sidebar: {
       '/base/browser/': [
@@ -69,6 +69,10 @@ module.exports = {
         { title: 'Git 基础命令', path: '/eng/git/1.md' },
         { title: 'Git 命令（二）', path: '/eng/git/2.md' },
         { title: 'travisCI', path: '/eng/travisCI-0.md' },
+      ],
+      '/memo/': [
+        { title: 'Latin-1 字符集', path: '/memo/iso-8859-1.md' },
+        { title: '正则表达式', path: '/memo/regular-expression.md' },
       ]
     },
     lastUpdated: '最后更新',

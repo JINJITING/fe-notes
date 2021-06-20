@@ -21,5 +21,3 @@ https://testapi.com/user/:id   //DELETE 方法，用户 ID 是 URI 的一部分�
 https://testapi.com/user/:id   //PUT 方法，请求发送用户信息，用户 ID 是 URI 的一部分，改
 https://testapi.com/user/:id   //GET 方法，用户 ID 是 URI 的一部分，查
 ```
-
-<!-- 2019.08.22 创建 -->
