@@ -71,6 +71,7 @@ module.exports = {
         { title: 'travisCI', path: '/eng/travisCI-0.md' },
       ],
       '/memo/': [
+        { title: 'JS 中的隐式转换', path: '/memo/js/implicit-conversion.md' },
         { title: 'Latin-1 字符集', path: '/memo/iso-8859-1.md' },
         { title: '正则表达式', path: '/memo/regular-expression.md' },
       ]
