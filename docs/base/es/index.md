@@ -6,6 +6,8 @@
 + ES414：规定了和 ECMAScript 相关的标准有哪些（即上述 3 条）
 
 ### ES 笔记
++ 基础
+  - [二进制和位操作](3-binary.md)
 + 变量、作用域
   - [变量/Variables](1-variables.md)
 + 面向对象（Object-Oriented）

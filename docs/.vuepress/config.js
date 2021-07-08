@@ -61,9 +61,6 @@ module.exports = {
             { title: '闭包', path: '/base/es/0-closures' },
           ]
         },
-        { title: 'this 指向', path: '/base/es/this.md'},
-        { title: '防抖与节流', path: '/base/es/debounce-and-throttle.md'},
-        { title: 'JS 执行机制', path: '/base/es/JS执行机制.md'}
       ],
       '/eng/': [
         { title: 'Git 基础命令', path: '/eng/git/1.md' },
