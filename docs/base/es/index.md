@@ -8,6 +8,7 @@
 ### ES 笔记
 + 基础
   - [二进制](3-binary.md)
+  - [浮点数](3-floating-points.md)
 + 变量、作用域
   - [变量/Variables](1-variables.md)
 + 面向对象（Object-Oriented）
