@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>变量/Variables | 前端笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="JINJITING 的前端学习笔记。">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.7b65c47c.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.184c0e15.js" as="script"><link rel="preload" href="/fe-notes/assets/js/2.7dd7a667.js" as="script"><link rel="preload" href="/fe-notes/assets/js/15.6d1c652e.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.bd4258d4.js"><link rel="prefetch" href="/fe-notes/assets/js/11.b3b8b2ea.js"><link rel="prefetch" href="/fe-notes/assets/js/12.a8e33728.js"><link rel="prefetch" href="/fe-notes/assets/js/13.b0b27fae.js"><link rel="prefetch" href="/fe-notes/assets/js/14.3c6d5653.js"><link rel="prefetch" href="/fe-notes/assets/js/16.70d97a90.js"><link rel="prefetch" href="/fe-notes/assets/js/17.7d7dd209.js"><link rel="prefetch" href="/fe-notes/assets/js/18.89a1fdd0.js"><link rel="prefetch" href="/fe-notes/assets/js/19.396ed5b6.js"><link rel="prefetch" href="/fe-notes/assets/js/20.2182173b.js"><link rel="prefetch" href="/fe-notes/assets/js/21.0f15d5c2.js"><link rel="prefetch" href="/fe-notes/assets/js/22.f271992f.js"><link rel="prefetch" href="/fe-notes/assets/js/23.56daea8a.js"><link rel="prefetch" href="/fe-notes/assets/js/24.af04785a.js"><link rel="prefetch" href="/fe-notes/assets/js/25.39958e42.js"><link rel="prefetch" href="/fe-notes/assets/js/26.576eae87.js"><link rel="prefetch" href="/fe-notes/assets/js/27.c0497ba9.js"><link rel="prefetch" href="/fe-notes/assets/js/28.d8d33e3b.js"><link rel="prefetch" href="/fe-notes/assets/js/29.1f0661f9.js"><link rel="prefetch" href="/fe-notes/assets/js/3.005312cb.js"><link rel="prefetch" href="/fe-notes/assets/js/30.0c937390.js"><link rel="prefetch" href="/fe-notes/assets/js/31.3b3f443a.js"><link rel="prefetch" href="/fe-notes/assets/js/32.fd176ef0.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e393aa53.js"><link rel="prefetch" href="/fe-notes/assets/js/34.fe588096.js"><link rel="prefetch" href="/fe-notes/assets/js/35.c7b26251.js"><link rel="prefetch" href="/fe-notes/assets/js/36.19b9913d.js"><link rel="prefetch" href="/fe-notes/assets/js/37.3ba4cc2a.js"><link rel="prefetch" href="/fe-notes/assets/js/38.f27e1010.js"><link rel="prefetch" href="/fe-notes/assets/js/4.5d41cd3b.js"><link rel="prefetch" href="/fe-notes/assets/js/5.0006b8ea.js"><link rel="prefetch" href="/fe-notes/assets/js/6.45eda98b.js"><link rel="prefetch" href="/fe-notes/assets/js/7.7762ec61.js"><link rel="prefetch" href="/fe-notes/assets/js/8.955e1480.js"><link rel="prefetch" href="/fe-notes/assets/js/9.e2c71e1e.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.7b65c47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link router-link-active">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link router-link-active">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/base/es/" aria-current="page" class="sidebar-link">ECMAScript</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>变量和作用域</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe-notes/base/es/1-variables.html" aria-current="page" class="active sidebar-link">变量</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe-notes/base/es/1-variables.html#动态属性" class="sidebar-link">动态属性</a></li><li class="sidebar-sub-header"><a href="/fe-notes/base/es/1-variables.html#复制" class="sidebar-link">复制</a></li><li class="sidebar-sub-header"><a href="/fe-notes/base/es/1-variables.html#参数传递" class="sidebar-link">参数传递</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面向对象</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="变量-variables"><a href="#变量-variables" class="header-anchor">#</a> 变量/Variables</h1> <p>ES 变量包含两种不同类型的数据：原始值（primitive value，即简单的数据）和引用值（reference value，多个值构成的对象）。保存原始值的变量是<strong>按值</strong>（by value）访问的，操作的是存储在变量中的实际值；引用值是保存在内存中的对象，操作的是对该对象的引用，即<strong>按引用</strong>（by reference）访问的。</p> <h2 id="动态属性"><a href="#动态属性" class="header-anchor">#</a> 动态属性</h2> <p>对于引用值，可以随时添加、修改和删除其属性和方法。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> str0 <span class="token operator">=</span> <span class="token string">'string'</span>
+<span class="token keyword">let</span> str1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">'string obj'</span><span class="token punctuation">)</span>
+str0<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'test0'</span>
+str1<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'test1'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str0<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str1<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// test1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> str0<span class="token punctuation">)</span> <span class="token comment">// string</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> str1<span class="token punctuation">)</span> <span class="token comment">// object</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="复制"><a href="#复制" class="header-anchor">#</a> 复制</h2> <p>原始值复制的变量相互独立；复制引用值时，实际复制的是一个指针，两个变量都指向同一个对象。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> n0 <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">let</span> n1 <span class="token operator">=</span> n0
+n1 <span class="token operator">=</span> <span class="token number">1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n0<span class="token punctuation">,</span> n1<span class="token punctuation">)</span> <span class="token comment">// 0 1</span>
+
+<span class="token keyword">let</span> obj0 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> obj1
+obj0<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>num<span class="token punctuation">)</span> <span class="token comment">// 0</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="参数传递"><a href="#参数传递" class="header-anchor">#</a> 参数传递</h2> <p>所有的参数都是按值传递的。在按值传递参数时，值会被复制到一个局部变量（即 arguments 对象中的一个槽位）。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 函数的参数是局部变量</span>
+<span class="token keyword">function</span> <span class="token function">addName</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'name0'</span>
+  obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'name1'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> p0 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">addName</span><span class="token punctuation">(</span>p0<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p0<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// name0</span>
+<span class="token comment">/**
+ * 如果变量按引用传递，p0 应该是 name 属性为 name1 的对象。
+ * 当 obj 在函数内部被重写时，它变成了一个指向本地对象的指针。而本地对象在函数执行结束时就被销毁了
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">5/4/2021, 10:00:59 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-notes/base/es/" class="prev router-link-active">
+        ECMAScript
+      </a></span> <span class="next"><a href="/fe-notes/base/es/2-prototypes.html">
+        原型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-notes/assets/js/app.184c0e15.js" defer></script><script src="/fe-notes/assets/js/2.7dd7a667.js" defer></script><script src="/fe-notes/assets/js/15.6d1c652e.js" defer></script>
+  </body>
+</html>

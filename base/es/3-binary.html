@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS 中的二进制 | 前端笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="JINJITING 的前端学习笔记。">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.7b65c47c.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.184c0e15.js" as="script"><link rel="preload" href="/fe-notes/assets/js/2.7dd7a667.js" as="script"><link rel="preload" href="/fe-notes/assets/js/16.70d97a90.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.bd4258d4.js"><link rel="prefetch" href="/fe-notes/assets/js/11.b3b8b2ea.js"><link rel="prefetch" href="/fe-notes/assets/js/12.a8e33728.js"><link rel="prefetch" href="/fe-notes/assets/js/13.b0b27fae.js"><link rel="prefetch" href="/fe-notes/assets/js/14.3c6d5653.js"><link rel="prefetch" href="/fe-notes/assets/js/15.6d1c652e.js"><link rel="prefetch" href="/fe-notes/assets/js/17.7d7dd209.js"><link rel="prefetch" href="/fe-notes/assets/js/18.89a1fdd0.js"><link rel="prefetch" href="/fe-notes/assets/js/19.396ed5b6.js"><link rel="prefetch" href="/fe-notes/assets/js/20.2182173b.js"><link rel="prefetch" href="/fe-notes/assets/js/21.0f15d5c2.js"><link rel="prefetch" href="/fe-notes/assets/js/22.f271992f.js"><link rel="prefetch" href="/fe-notes/assets/js/23.56daea8a.js"><link rel="prefetch" href="/fe-notes/assets/js/24.af04785a.js"><link rel="prefetch" href="/fe-notes/assets/js/25.39958e42.js"><link rel="prefetch" href="/fe-notes/assets/js/26.576eae87.js"><link rel="prefetch" href="/fe-notes/assets/js/27.c0497ba9.js"><link rel="prefetch" href="/fe-notes/assets/js/28.d8d33e3b.js"><link rel="prefetch" href="/fe-notes/assets/js/29.1f0661f9.js"><link rel="prefetch" href="/fe-notes/assets/js/3.005312cb.js"><link rel="prefetch" href="/fe-notes/assets/js/30.0c937390.js"><link rel="prefetch" href="/fe-notes/assets/js/31.3b3f443a.js"><link rel="prefetch" href="/fe-notes/assets/js/32.fd176ef0.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e393aa53.js"><link rel="prefetch" href="/fe-notes/assets/js/34.fe588096.js"><link rel="prefetch" href="/fe-notes/assets/js/35.c7b26251.js"><link rel="prefetch" href="/fe-notes/assets/js/36.19b9913d.js"><link rel="prefetch" href="/fe-notes/assets/js/37.3ba4cc2a.js"><link rel="prefetch" href="/fe-notes/assets/js/38.f27e1010.js"><link rel="prefetch" href="/fe-notes/assets/js/4.5d41cd3b.js"><link rel="prefetch" href="/fe-notes/assets/js/5.0006b8ea.js"><link rel="prefetch" href="/fe-notes/assets/js/6.45eda98b.js"><link rel="prefetch" href="/fe-notes/assets/js/7.7762ec61.js"><link rel="prefetch" href="/fe-notes/assets/js/8.955e1480.js"><link rel="prefetch" href="/fe-notes/assets/js/9.e2c71e1e.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.7b65c47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link router-link-active">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link router-link-active">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/base/es/" aria-current="page" class="sidebar-link">ECMAScript</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>变量和作用域</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面向对象</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="js-中的二进制"><a href="#js-中的二进制" class="header-anchor">#</a> JS 中的二进制</h1> <h2 id="二进制"><a href="#二进制" class="header-anchor">#</a> 二进制</h2> <p><strong>注意</strong>：以下内容，二进制数都是用 1 个字节（8 个二进制位）来表示。</p> <p>下面是 1 和 -1 的二进制表示，我们称为<strong>真值</strong>。8 位二进制数能表示的真值范围是<code>[-2⁸, +2⁸]</code>。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token operator">+</span> <span class="token number">0000</span> <span class="token number">0001</span> <span class="token comment">// +1</span>
+<span class="token operator">-</span> <span class="token number">0000</span> <span class="token number">0001</span> <span class="token comment">// -1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>计算机只能存储 0 和 1，不能存储正负符号，所以用最高位来表示符号，0 为正，1 为负，用剩下位数来表示真值的绝对值，这就是<strong>原码</strong>表示法。原码能表示的范围是<code>[-2⁷, +2⁷ - 1]</code>，因为 <code>1 000 0000</code> 表示 -0 没有意义，所以这个数字来表示 -128，因此负数比正数多一个。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">0</span> <span class="token number">000</span> <span class="token number">0001</span> <span class="token comment">// +1</span>
+<span class="token number">1</span> <span class="token number">000</span> <span class="token number">0001</span> <span class="token comment">// -1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>反码</strong>（一补数）是另一种表示数字的方法，规则如下：整数的反码和它的原码一样；负数的反码，原码的符号位不变，其余各位按位取反。反码的表示范围也是 <code>[-2⁷, +2⁷ - 1]</code>。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">0</span> <span class="token number">000</span> <span class="token number">0001</span> <span class="token comment">// +1</span>
+<span class="token number">1</span> <span class="token number">111</span> <span class="token number">1110</span> <span class="token comment">// -1</span>
+
+<span class="token number">0</span> <span class="token number">000</span> <span class="token number">0010</span> <span class="token comment">// +2</span>
+<span class="token number">1</span> <span class="token number">111</span> <span class="token number">1101</span> <span class="token comment">// -2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>补码</strong>（二补数）主要是为了简化运算，将减法变为加法而发明的数字表示法，规则：整数的补码和原码一样；负数的补码是反码末尾加 1。8 位补码范围也是 <code>[-2⁷, +2⁷ - 1]</code>。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">0</span> <span class="token number">000</span> <span class="token number">0001</span> <span class="token comment">// +1</span>
+<span class="token number">1</span> <span class="token number">111</span> <span class="token number">1111</span> <span class="token comment">// -1</span>
+
+<span class="token number">0</span> <span class="token number">000</span> <span class="token number">0010</span> <span class="token comment">// +2</span>
+<span class="token number">1</span> <span class="token number">111</span> <span class="token number">1110</span> <span class="token comment">// -2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>快速计算负数补码的方法：由其原码低位向高位（从右往左）找到第一个1，1 和其低位（右边）不变，1 前面的高位（左边）按位取反即可。</p> <h2 id="es-中的位操作"><a href="#es-中的位操作" class="header-anchor">#</a> ES 中的位操作</h2> <p>ES 中所有数值都以 IEEE 754 <strong>64 位格式</strong>存储，位操作会先把值转换为 <strong>32 位整数</strong>，操作后将结果转换为 64 位。<br>
+有符号整数使用 32 位的前 31 位表示整数值。第 32 位表示数值的符号，如 0 表示正，1 表示负。这一位称为符号位（sign bit），它的值决定了数值其余部分的格式。正值以真正的二进制格式存储，即 31 位中的每一位都代表 2 的幂。</p> <p>位操作在数值的底层表示上完成，所以速度会快得多。<br>
+（下面示例用 8 位二进制表示）</p> <h3 id="按位非"><a href="#按位非" class="header-anchor">#</a> ~ 按位非</h3> <p>按位非（~，Bitwise NOT）的作用是返回数值的一补数（反码）。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numNOT <span class="token operator">=</span> <span class="token operator">~</span><span class="token number">21</span> <span class="token comment">// -22</span>
+<span class="token comment">/**
+ *  21 = 0001 1001
+ * ---------------
+ * NOT = 1110 1010 = -22
+ */</span>
+<span class="token comment">// numNOT = -21 - 1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>按位非的最终效果等同于对数值取反并减 1。</p> <h3 id="按位与"><a href="#按位与" class="header-anchor">#</a> &amp; 按位与</h3> <p>按位与（&amp;，Bitwise AND）就是将两个操作数的每一个位对齐，然后基于真值表中的规则，对每一位执行相应的与操作（在两个位都是 1 时返回 1，在任何一位是 0 时返回 0）。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numAND <span class="token operator">=</span> <span class="token number">25</span> <span class="token operator">&amp;</span> <span class="token number">3</span> <span class="token comment">// 1</span>
+<span class="token comment">/**
+ *  25 = 0001 1001
+ *   3 = 0000 0011
+ * ---------------
+ * AND = 0000 0001 = 1
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="按位或"><a href="#按位或" class="header-anchor">#</a> | 按位或</h3> <p>按位或操作（|，Bitwise OR）在至少一位是 1 时返回 1，两位都是 0 时返回 0。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numOR <span class="token operator">=</span> <span class="token number">25</span> <span class="token operator">|</span> <span class="token number">3</span> <span class="token comment">// 27</span>
+<span class="token comment">/**
+ *  25 = 0001 1001
+ *   3 = 0000 0011
+ * ---------------
+ *  OR = 0001 1011 = 27
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="按位异或"><a href="#按位异或" class="header-anchor">#</a> ^ 按位异或</h3> <p>按位异或（^，Bitwise XOR）与按位或的区别是，它只在一位上是 1 的时候返回 1（两位都是 1 或 0，则返回 0）。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numXOR <span class="token operator">=</span> <span class="token number">25</span> <span class="token operator">^</span> <span class="token number">3</span> <span class="token comment">// 26</span>
+<span class="token comment">/**
+ *  25 = 0001 1001
+ *   3 = 0000 0011
+ * ---------------
+ * XOR = 0001 1010 = 26
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="左移"><a href="#左移" class="header-anchor">#</a> &lt;&lt; 左移</h3> <p>左移（&lt;&lt;，Left Shift）会按照指定的位数将数值的所有位向左移动。（a &lt;&lt; n 等同于 a * 2ⁿ）</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numLS <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">&lt;&lt;</span> <span class="token number">4</span> <span class="token comment">// 48</span>
+<span class="token comment">/**
+ *   3 = 0000 0011
+ * ---------------
+ *  LS = 0011 0000 = 48
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>注意</strong>，左移会保留它所操作数值的符号。<code>-3 &lt;&lt; 4 === -48</code></p> <h3 id="有符号右移"><a href="#有符号右移" class="header-anchor">#</a> &gt;&gt; 有符号右移</h3> <p>有符号右移（&gt;&gt;，Signed Right Shift）会将数值都向右移，同时保留符号（正或负）。有符号右移实际上是左移的逆运算。（a &gt;&gt; n 等同于 a / 2ⁿ 并向下取整）</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> numSRS <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;&gt;</span> <span class="token number">2</span> <span class="token comment">// 1</span>
+<span class="token comment">/**
+ *   5 = 0000 0101
+ * ---------------
+ * SRS = 0000 0001 = 1
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="无符号右移"><a href="#无符号右移" class="header-anchor">#</a> &gt;&gt;&gt; 无符号右移</h3> <p>无符号右移（&gt;&gt;&gt;，Unsigned Right Shift）也会将数值向右移。<br>
+对于正数，无符号右移与有符号右移结果相同。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> nuURS <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;&gt;</span> <span class="token number">2</span> <span class="token comment">// 1</span>
+<span class="token comment">/**
+ *   5 = 0000 0101
+ * ---------------
+ * URS = 0000 0001 = 1
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>对于负数，无符号右移会变成正数。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> nuURS <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span> <span class="token operator">&gt;&gt;</span> <span class="token number">30</span> <span class="token comment">// 3</span>
+<span class="token comment">/**
+ *  -5 = 1111 1111 1111 1111 1111 1111 1111 1010
+ * ---------------------------------------------
+ * URS = 0000 0000 0000 0000 0000 0000 0000 0011
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="位操作的范围"><a href="#位操作的范围" class="header-anchor">#</a> 位操作的范围</h3> <p>对 JS 中对任何数字做位运算，都会被转为整形。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token number">2.1</span> <span class="token operator">|</span> <span class="token number">0</span> <span class="token comment">// 2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>根据上面的知识推断二进制整数的表示范围是 <code>[-2³¹, +2³¹ - 1]</code>([-2147483648, +2147483647])。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token comment">// 2147483647</span>
+max <span class="token operator">|=</span> <span class="token number">0</span> <span class="token comment">// 2147483647</span>
+max <span class="token operator">+=</span> <span class="token number">1</span> <span class="token comment">// 2147483648</span>
+max <span class="token operator">|=</span> <span class="token number">0</span> <span class="token comment">// -2147483648</span>
+max <span class="token operator">|=</span> <span class="token number">0</span> <span class="token comment">// -2147483648</span>
+max <span class="token operator">-=</span> <span class="token number">1</span> <span class="token comment">// -2147483649</span>
+max <span class="token operator">|=</span> <span class="token number">0</span> <span class="token comment">// 2147483647</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>超过最低和最高的值再去进行转换时都将改变正负号。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">7/14/2021, 10:52:13 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-notes/assets/js/app.184c0e15.js" defer></script><script src="/fe-notes/assets/js/2.7dd7a667.js" defer></script><script src="/fe-notes/assets/js/16.70d97a90.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>闭包/Closure | 前端笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="JINJITING 的前端学习笔记。">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.7b65c47c.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.184c0e15.js" as="script"><link rel="preload" href="/fe-notes/assets/js/2.7dd7a667.js" as="script"><link rel="preload" href="/fe-notes/assets/js/11.b3b8b2ea.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.bd4258d4.js"><link rel="prefetch" href="/fe-notes/assets/js/12.a8e33728.js"><link rel="prefetch" href="/fe-notes/assets/js/13.b0b27fae.js"><link rel="prefetch" href="/fe-notes/assets/js/14.3c6d5653.js"><link rel="prefetch" href="/fe-notes/assets/js/15.6d1c652e.js"><link rel="prefetch" href="/fe-notes/assets/js/16.70d97a90.js"><link rel="prefetch" href="/fe-notes/assets/js/17.7d7dd209.js"><link rel="prefetch" href="/fe-notes/assets/js/18.89a1fdd0.js"><link rel="prefetch" href="/fe-notes/assets/js/19.396ed5b6.js"><link rel="prefetch" href="/fe-notes/assets/js/20.2182173b.js"><link rel="prefetch" href="/fe-notes/assets/js/21.0f15d5c2.js"><link rel="prefetch" href="/fe-notes/assets/js/22.f271992f.js"><link rel="prefetch" href="/fe-notes/assets/js/23.56daea8a.js"><link rel="prefetch" href="/fe-notes/assets/js/24.af04785a.js"><link rel="prefetch" href="/fe-notes/assets/js/25.39958e42.js"><link rel="prefetch" href="/fe-notes/assets/js/26.576eae87.js"><link rel="prefetch" href="/fe-notes/assets/js/27.c0497ba9.js"><link rel="prefetch" href="/fe-notes/assets/js/28.d8d33e3b.js"><link rel="prefetch" href="/fe-notes/assets/js/29.1f0661f9.js"><link rel="prefetch" href="/fe-notes/assets/js/3.005312cb.js"><link rel="prefetch" href="/fe-notes/assets/js/30.0c937390.js"><link rel="prefetch" href="/fe-notes/assets/js/31.3b3f443a.js"><link rel="prefetch" href="/fe-notes/assets/js/32.fd176ef0.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e393aa53.js"><link rel="prefetch" href="/fe-notes/assets/js/34.fe588096.js"><link rel="prefetch" href="/fe-notes/assets/js/35.c7b26251.js"><link rel="prefetch" href="/fe-notes/assets/js/36.19b9913d.js"><link rel="prefetch" href="/fe-notes/assets/js/37.3ba4cc2a.js"><link rel="prefetch" href="/fe-notes/assets/js/38.f27e1010.js"><link rel="prefetch" href="/fe-notes/assets/js/4.5d41cd3b.js"><link rel="prefetch" href="/fe-notes/assets/js/5.0006b8ea.js"><link rel="prefetch" href="/fe-notes/assets/js/6.45eda98b.js"><link rel="prefetch" href="/fe-notes/assets/js/7.7762ec61.js"><link rel="prefetch" href="/fe-notes/assets/js/8.955e1480.js"><link rel="prefetch" href="/fe-notes/assets/js/9.e2c71e1e.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.7b65c47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link router-link-active">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link router-link-active">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/base/es/" aria-current="page" class="sidebar-link">ECMAScript</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>变量和作用域</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面向对象</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>函数</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe-notes/base/es/0-closures.html" aria-current="page" class="active sidebar-link">闭包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe-notes/base/es/0-closures.html#闭包的定义" class="sidebar-link">闭包的定义</a></li><li class="sidebar-sub-header"><a href="/fe-notes/base/es/0-closures.html#闭包的应用" class="sidebar-link">闭包的应用</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="闭包-closure"><a href="#闭包-closure" class="header-anchor">#</a> 闭包/Closure</h1> <h2 id="闭包的定义"><a href="#闭包的定义" class="header-anchor">#</a> 闭包的定义</h2> <h3 id="mdn-的闭包定义"><a href="#mdn-的闭包定义" class="header-anchor">#</a> MDN 的闭包定义</h3> <blockquote><p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.<br>
+一个函数和对其周围状态（lexical environment，词法环境）的引用捆绑在一起（或者说函数被引用包围），这样的组合就是闭包（closure）。也就是说，闭包让你可以在一个内层函数中访问到其外层函数的作用域。在 JavaScript 中，每当创建一个函数，闭包就会在函数创建的同时被创建出来。</p></blockquote> <h3 id="js-高级程序设计第-4-版的闭包定义"><a href="#js-高级程序设计第-4-版的闭包定义" class="header-anchor">#</a> JS 高级程序设计第 4 版的闭包定义</h3> <blockquote><p>The terms anonymous functions and closures are often incorrectly used interchangeably. Closures are functions that have access to variables from another function’s scope.<br>
+匿名函数经常被人误认为是闭包（closure）。闭包指的是那些引用了另一个函数作用域中变量的函数。</p></blockquote> <p>（上面两种说法中的共同点就是闭包可以访问到外层作用域。在 JS 中，函数内部是能直接读取全局变量的，从这点上来说，JS 中的函数和闭包是一起出现的。）</p> <h3 id="其他定义"><a href="#其他定义" class="header-anchor">#</a> 其他定义</h3> <blockquote><p>在 JavaScript 中，根据词法作用域规则，内部函数总是可以访问其外部函数中声明的变量，当通过调用一个外部函数返回一个内部函数后，即使该外部函数已经执行结束了，但是内部函数引用外部函数的变量依然保存在内存中，这些变量的集合称为闭包。比如外部函数是 foo，那么这些变量的集合就称为 foo 函数的闭包。</p></blockquote> <blockquote><p>ECMAScript中，闭包指的是：</p> <ol><li>从理论角度：所有的函数。因为它们都在创建的时候就将上层上下文的数据保存起来了。哪怕是简单的全局变量也是如此，因为函数中访问全局变量就相当于是在访问自由变量，这个时候使用最外层的作用域。</li> <li>从实践角度：以下函数才算是闭包：<br>
+i. 即使创建它的上下文已经销毁，它仍然存在（比如，内部函数从父函数中返回）<br>
+ii. 在代码中引用了自由变量</li></ol></blockquote> <p>（https://github.com/mqyqingfeng/Blog/issues/9）</p> <h2 id="闭包的应用"><a href="#闭包的应用" class="header-anchor">#</a> 闭包的应用</h2> <h3 id="_1-柯里化函数"><a href="#_1-柯里化函数" class="header-anchor">#</a> 1. 柯里化函数</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> c <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">5/4/2021, 10:00:59 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-notes/base/es/1-classes.html" class="prev">
+        类
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-notes/assets/js/app.184c0e15.js" defer></script><script src="/fe-notes/assets/js/2.7dd7a667.js" defer></script><script src="/fe-notes/assets/js/11.b3b8b2ea.js" defer></script>
+  </body>
+</html>

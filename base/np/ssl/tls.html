@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SSL/TLS | 前端笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="JINJITING 的前端学习笔记。">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.7b65c47c.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.184c0e15.js" as="script"><link rel="preload" href="/fe-notes/assets/js/2.7dd7a667.js" as="script"><link rel="preload" href="/fe-notes/assets/js/24.af04785a.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.bd4258d4.js"><link rel="prefetch" href="/fe-notes/assets/js/11.b3b8b2ea.js"><link rel="prefetch" href="/fe-notes/assets/js/12.a8e33728.js"><link rel="prefetch" href="/fe-notes/assets/js/13.b0b27fae.js"><link rel="prefetch" href="/fe-notes/assets/js/14.3c6d5653.js"><link rel="prefetch" href="/fe-notes/assets/js/15.6d1c652e.js"><link rel="prefetch" href="/fe-notes/assets/js/16.70d97a90.js"><link rel="prefetch" href="/fe-notes/assets/js/17.7d7dd209.js"><link rel="prefetch" href="/fe-notes/assets/js/18.89a1fdd0.js"><link rel="prefetch" href="/fe-notes/assets/js/19.396ed5b6.js"><link rel="prefetch" href="/fe-notes/assets/js/20.2182173b.js"><link rel="prefetch" href="/fe-notes/assets/js/21.0f15d5c2.js"><link rel="prefetch" href="/fe-notes/assets/js/22.f271992f.js"><link rel="prefetch" href="/fe-notes/assets/js/23.56daea8a.js"><link rel="prefetch" href="/fe-notes/assets/js/25.39958e42.js"><link rel="prefetch" href="/fe-notes/assets/js/26.576eae87.js"><link rel="prefetch" href="/fe-notes/assets/js/27.c0497ba9.js"><link rel="prefetch" href="/fe-notes/assets/js/28.d8d33e3b.js"><link rel="prefetch" href="/fe-notes/assets/js/29.1f0661f9.js"><link rel="prefetch" href="/fe-notes/assets/js/3.005312cb.js"><link rel="prefetch" href="/fe-notes/assets/js/30.0c937390.js"><link rel="prefetch" href="/fe-notes/assets/js/31.3b3f443a.js"><link rel="prefetch" href="/fe-notes/assets/js/32.fd176ef0.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e393aa53.js"><link rel="prefetch" href="/fe-notes/assets/js/34.fe588096.js"><link rel="prefetch" href="/fe-notes/assets/js/35.c7b26251.js"><link rel="prefetch" href="/fe-notes/assets/js/36.19b9913d.js"><link rel="prefetch" href="/fe-notes/assets/js/37.3ba4cc2a.js"><link rel="prefetch" href="/fe-notes/assets/js/38.f27e1010.js"><link rel="prefetch" href="/fe-notes/assets/js/4.5d41cd3b.js"><link rel="prefetch" href="/fe-notes/assets/js/5.0006b8ea.js"><link rel="prefetch" href="/fe-notes/assets/js/6.45eda98b.js"><link rel="prefetch" href="/fe-notes/assets/js/7.7762ec61.js"><link rel="prefetch" href="/fe-notes/assets/js/8.955e1480.js"><link rel="prefetch" href="/fe-notes/assets/js/9.e2c71e1e.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.7b65c47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/base/np/http/protocol-format.html" class="sidebar-link">协议格式</a></li><li><a href="/fe-notes/base/np/uri-and-url.html" class="sidebar-link">URI/URL/URN</a></li><li><a href="/fe-notes/base/np/http/status-code.html" class="sidebar-link">状态码</a></li><li><a href="/fe-notes/base/np/http/headers.html" class="sidebar-link">消息头</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ssl-tls"><a href="#ssl-tls" class="header-anchor">#</a> SSL/TLS</h1> <p>SSL 即安全套接层（Secure Sockets Layer），在 OSI 模型中处于第 5 层（会话层），后改名为 TLS（传输层安全，Transport Layer Security）。<br>
+TLS 由记录协议、握手协议、警告协议、变更密码规范协议、扩展协议等几个子协议组成，综合使用了对称加密、非对称加密、身份认证等许多密码学前沿技术。</p> <p>浏览器和服务器在使用 TLS 建立连接时需要选择一组恰当的加密算法来实现安全通信，这些算法的组合被称为“密码套件”（cipher suite，也叫加密套件）。</p> <p>TLS 的密码套件格式：密钥交换算法 + 签名算法 + 对称加密算法 + 摘要算法。</p> <h2 id="tls-的组成"><a href="#tls-的组成" class="header-anchor">#</a> TLS 的组成</h2> <ul><li>记录协议（Record Protocol）规定了 TLS 收发数据的基本单位：记录（record）。它有点像是 TCP 里的 segment，所有的其他子协议都需要通过记录协议发出。但多个记录数据可以在一个 TCP 包里一次性发出，也并不需要像 TCP 那样返回 ACK。</li> <li>警报协议（Alert Protocol）的职责是向对方发出警报信息，有点像是 HTTP 协议里的状态码。比如，protocol_version 就是不支持旧版本，bad_certificate 就是证书有问题，收到警报后另一方可以选择继续，也可以立即终止连接。</li> <li>握手协议（Handshake Protocol）是 TLS 里最复杂的子协议，要比 TCP 的 SYN/ACK 复杂的多，浏览器和服务器会在握手过程中协商 TLS 版本号、随机数、密码套件等信息，然后交换证书和密钥参数，最终双方协商得到会话密钥，用于后续的混合加密系统。</li> <li>变更密码规范协议（Change Cipher Spec Protocol），它非常简单，就是一个“通知”，告诉对方，后续的数据都将使用加密保护。那么反过来，在它之前，数据都是明文的。</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">5/4/2021, 10:00:59 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-notes/assets/js/app.184c0e15.js" defer></script><script src="/fe-notes/assets/js/2.7dd7a667.js" defer></script><script src="/fe-notes/assets/js/24.af04785a.js" defer></script>
+  </body>
+</html>

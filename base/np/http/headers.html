@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTTP 消息头（Headers） | 前端笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="JINJITING 的前端学习笔记。">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.7b65c47c.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.184c0e15.js" as="script"><link rel="preload" href="/fe-notes/assets/js/2.7dd7a667.js" as="script"><link rel="preload" href="/fe-notes/assets/js/20.2182173b.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.bd4258d4.js"><link rel="prefetch" href="/fe-notes/assets/js/11.b3b8b2ea.js"><link rel="prefetch" href="/fe-notes/assets/js/12.a8e33728.js"><link rel="prefetch" href="/fe-notes/assets/js/13.b0b27fae.js"><link rel="prefetch" href="/fe-notes/assets/js/14.3c6d5653.js"><link rel="prefetch" href="/fe-notes/assets/js/15.6d1c652e.js"><link rel="prefetch" href="/fe-notes/assets/js/16.70d97a90.js"><link rel="prefetch" href="/fe-notes/assets/js/17.7d7dd209.js"><link rel="prefetch" href="/fe-notes/assets/js/18.89a1fdd0.js"><link rel="prefetch" href="/fe-notes/assets/js/19.396ed5b6.js"><link rel="prefetch" href="/fe-notes/assets/js/21.0f15d5c2.js"><link rel="prefetch" href="/fe-notes/assets/js/22.f271992f.js"><link rel="prefetch" href="/fe-notes/assets/js/23.56daea8a.js"><link rel="prefetch" href="/fe-notes/assets/js/24.af04785a.js"><link rel="prefetch" href="/fe-notes/assets/js/25.39958e42.js"><link rel="prefetch" href="/fe-notes/assets/js/26.576eae87.js"><link rel="prefetch" href="/fe-notes/assets/js/27.c0497ba9.js"><link rel="prefetch" href="/fe-notes/assets/js/28.d8d33e3b.js"><link rel="prefetch" href="/fe-notes/assets/js/29.1f0661f9.js"><link rel="prefetch" href="/fe-notes/assets/js/3.005312cb.js"><link rel="prefetch" href="/fe-notes/assets/js/30.0c937390.js"><link rel="prefetch" href="/fe-notes/assets/js/31.3b3f443a.js"><link rel="prefetch" href="/fe-notes/assets/js/32.fd176ef0.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e393aa53.js"><link rel="prefetch" href="/fe-notes/assets/js/34.fe588096.js"><link rel="prefetch" href="/fe-notes/assets/js/35.c7b26251.js"><link rel="prefetch" href="/fe-notes/assets/js/36.19b9913d.js"><link rel="prefetch" href="/fe-notes/assets/js/37.3ba4cc2a.js"><link rel="prefetch" href="/fe-notes/assets/js/38.f27e1010.js"><link rel="prefetch" href="/fe-notes/assets/js/4.5d41cd3b.js"><link rel="prefetch" href="/fe-notes/assets/js/5.0006b8ea.js"><link rel="prefetch" href="/fe-notes/assets/js/6.45eda98b.js"><link rel="prefetch" href="/fe-notes/assets/js/7.7762ec61.js"><link rel="prefetch" href="/fe-notes/assets/js/8.955e1480.js"><link rel="prefetch" href="/fe-notes/assets/js/9.e2c71e1e.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.7b65c47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link router-link-active">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link router-link-active">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/base/np/http/protocol-format.html" class="sidebar-link">协议格式</a></li><li><a href="/fe-notes/base/np/uri-and-url.html" class="sidebar-link">URI/URL/URN</a></li><li><a href="/fe-notes/base/np/http/status-code.html" class="sidebar-link">状态码</a></li><li><a href="/fe-notes/base/np/http/headers.html" aria-current="page" class="active sidebar-link">消息头</a><ul class="sidebar-sub-headers"></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="http-消息头-headers"><a href="#http-消息头-headers" class="header-anchor">#</a> HTTP 消息头（Headers）</h1> <p>HTTP 消息头允许客户端和服务器通过 request 和 response 传递附加消息。一个请求头由名称（不区分大小写）后跟一个冒号“:”，冒号后跟具体的值。
+根据不同上下文，可分为：</p> <ul><li>一般头（General header）：同时适用于请求和响应消息，但与最终消息主体中传输的数据无关的消息头。</li> <li>请求头：包含更多有关要获取的资源或客户端本身信息的消息头。（CORS 定义了 simple headers，是请求头的子集）</li> <li>响应头：包含有关响应的补充信息，如其位置或服务器本身（名称和版本等）的消息头。</li> <li>实体头（Entity header）：包含有关实体主体的更多信息，比如主体长（Content-Length）度或其 MIME 类型。</li></ul> <p>根据代理的处理方式，可分为：</p> <ul><li>端到端消息头：必须被传输到最终的消息接收者，即请求的服务器或响应的客户端。中间的代理服务器必须转发未经修改的端到端消息头，并且必须缓存它们。</li> <li>逐跳消息头：仅对单次传输连接有意义，不能通过代理或缓存进行重新转发。</li></ul> <h3 id="常见的一般头"><a href="#常见的一般头" class="header-anchor">#</a> 常见的一般头</h3> <ul><li>Cache-Control：指定缓存的机制</li> <li>Connection：连接类型</li> <li>Date：消息被发送时的日期和时间</li></ul> <h3 id="常见的请求头"><a href="#常见的请求头" class="header-anchor">#</a> 常见的请求头</h3> <ul><li>Accept：能接受的回应内容类型</li> <li>Accept-Charset：能接受的字符集</li> <li>Accept-Datetime：能接受的按照时间来表示的版本</li> <li>Accept-Encoding：能接受的编码方式列表</li> <li>Accept-Language：能接受的回应内容的自然语言列表</li> <li>Host：服务器的域名（用于虚拟主机），以及服务器所监听的传输控制协议端口号</li> <li>Referer：表示浏览器所访问的前一个页面，正是那个页面上的某个链接将浏览器带到了当前所请求的这个页面</li> <li>User-Agent：浏览器身份标识字符串</li></ul> <h3 id="常见的响应头"><a href="#常见的响应头" class="header-anchor">#</a> 常见的响应头</h3> <ul><li>Access-Control-Allow-Origin：指定哪些网站可参与到跨来源资源共享过程中</li> <li>Age：在代理缓存中存在的时间，以秒为单位</li> <li>Location：进行重定向或者创建新资源时使用</li> <li>Server：服务器名</li></ul> <h3 id="常见的实体头"><a href="#常见的实体头" class="header-anchor">#</a> 常见的实体头</h3> <ul><li>Content-Encoding：内容主体使用的编码类型</li> <li>Content-Length：内容主体的大小</li> <li>Content-Type：内容的 MIME 类型</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">5/4/2021, 10:00:59 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-notes/base/np/http/status-code.html" class="prev">
+        状态码
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-notes/assets/js/app.184c0e15.js" defer></script><script src="/fe-notes/assets/js/2.7dd7a667.js" defer></script><script src="/fe-notes/assets/js/20.2182173b.js" defer></script>
+  </body>
+</html>

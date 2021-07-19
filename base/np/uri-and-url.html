@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>URI、URL、URN | 前端笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="JINJITING 的前端学习笔记。">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.7b65c47c.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.184c0e15.js" as="script"><link rel="preload" href="/fe-notes/assets/js/2.7dd7a667.js" as="script"><link rel="preload" href="/fe-notes/assets/js/25.39958e42.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.bd4258d4.js"><link rel="prefetch" href="/fe-notes/assets/js/11.b3b8b2ea.js"><link rel="prefetch" href="/fe-notes/assets/js/12.a8e33728.js"><link rel="prefetch" href="/fe-notes/assets/js/13.b0b27fae.js"><link rel="prefetch" href="/fe-notes/assets/js/14.3c6d5653.js"><link rel="prefetch" href="/fe-notes/assets/js/15.6d1c652e.js"><link rel="prefetch" href="/fe-notes/assets/js/16.70d97a90.js"><link rel="prefetch" href="/fe-notes/assets/js/17.7d7dd209.js"><link rel="prefetch" href="/fe-notes/assets/js/18.89a1fdd0.js"><link rel="prefetch" href="/fe-notes/assets/js/19.396ed5b6.js"><link rel="prefetch" href="/fe-notes/assets/js/20.2182173b.js"><link rel="prefetch" href="/fe-notes/assets/js/21.0f15d5c2.js"><link rel="prefetch" href="/fe-notes/assets/js/22.f271992f.js"><link rel="prefetch" href="/fe-notes/assets/js/23.56daea8a.js"><link rel="prefetch" href="/fe-notes/assets/js/24.af04785a.js"><link rel="prefetch" href="/fe-notes/assets/js/26.576eae87.js"><link rel="prefetch" href="/fe-notes/assets/js/27.c0497ba9.js"><link rel="prefetch" href="/fe-notes/assets/js/28.d8d33e3b.js"><link rel="prefetch" href="/fe-notes/assets/js/29.1f0661f9.js"><link rel="prefetch" href="/fe-notes/assets/js/3.005312cb.js"><link rel="prefetch" href="/fe-notes/assets/js/30.0c937390.js"><link rel="prefetch" href="/fe-notes/assets/js/31.3b3f443a.js"><link rel="prefetch" href="/fe-notes/assets/js/32.fd176ef0.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e393aa53.js"><link rel="prefetch" href="/fe-notes/assets/js/34.fe588096.js"><link rel="prefetch" href="/fe-notes/assets/js/35.c7b26251.js"><link rel="prefetch" href="/fe-notes/assets/js/36.19b9913d.js"><link rel="prefetch" href="/fe-notes/assets/js/37.3ba4cc2a.js"><link rel="prefetch" href="/fe-notes/assets/js/38.f27e1010.js"><link rel="prefetch" href="/fe-notes/assets/js/4.5d41cd3b.js"><link rel="prefetch" href="/fe-notes/assets/js/5.0006b8ea.js"><link rel="prefetch" href="/fe-notes/assets/js/6.45eda98b.js"><link rel="prefetch" href="/fe-notes/assets/js/7.7762ec61.js"><link rel="prefetch" href="/fe-notes/assets/js/8.955e1480.js"><link rel="prefetch" href="/fe-notes/assets/js/9.e2c71e1e.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.7b65c47c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/base/np/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/fe-notes/base/es/" class="nav-link">
+  ES
+</a></div><div class="nav-item"><a href="/fe-notes/eng/" class="nav-link">
+  工程化
+</a></div><div class="nav-item"><a href="/fe-notes/memo/" class="nav-link">
+  备忘录
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/base/np/http/protocol-format.html" class="sidebar-link">协议格式</a></li><li><a href="/fe-notes/base/np/uri-and-url.html" aria-current="page" class="active sidebar-link">URI/URL/URN</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe-notes/base/np/uri-and-url.html#url" class="sidebar-link">URL</a></li><li class="sidebar-sub-header"><a href="/fe-notes/base/np/uri-and-url.html#urn" class="sidebar-link">URN</a></li></ul></li><li><a href="/fe-notes/base/np/http/status-code.html" class="sidebar-link">状态码</a></li><li><a href="/fe-notes/base/np/http/headers.html" class="sidebar-link">消息头</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="uri、url、urn"><a href="#uri、url、urn" class="header-anchor">#</a> URI、URL、URN</h1> <ul><li>URI：Uniform Resource Identifier，统一资源标识符。</li> <li>URL：Uniform Resource Locator，统一资源定位符。</li> <li>URN：Uniform Resource Name，统一资源名称。<br>
+URL 和 URN 都是 URI 的子集。<br>
+以身份证举例：家庭住址即 URL，身份证号码即 URN。</li></ul> <h2 id="url"><a href="#url" class="header-anchor">#</a> URL</h2> <p>URL 不仅标识了 Web 资源，还指定了操作或者获取方式，同时指出了主要访问机制和网络位置。<br>
+例如：一般的网址等。</p> <h3 id="url组成"><a href="#url组成" class="header-anchor">#</a> URL组成</h3> <div class="language-JavaScript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>scheme：使用的协议，如 FTP、HTTP</li> <li>user[:password]：表示访问资源的用户名和密码，常见于 FTP 协议中</li> <li>host：主机，如 IP 地址或域名</li> <li>port：端口号，如 HTTP 默认为80端口</li> <li>path：访问资源的路径</li> <li>query：请求数据，以“?”开头</li> <li>fragment：定位锚点，以“#”开头，可用于快速定位网页对应的段落</li></ul> <h2 id="urn"><a href="#urn" class="header-anchor">#</a> URN</h2> <p>URN特定命名空间的名字标识资源。使用 URN 可以在不知道其网络位置及访问方式的情况下讨论资源。<br>
+例如：ISBN</p> <h3 id="urn组成"><a href="#urn组成" class="header-anchor">#</a> URN组成</h3> <div class="language-JavaScript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// scheme:path</span>
+<span class="token comment">/** e.g.  
+ * urn:issn&lt;XSLT&gt;:1535-3613&lt;/nowiki&gt;
+ * scheme==urn
+ * path==issn&lt;XSLT&gt;:1535-3613&lt;/nowiki&gt;
+ */</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>scheme：采用的协议为 urn</li> <li>path：路径</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">5/4/2021, 10:00:59 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-notes/base/np/http/protocol-format.html" class="prev">
+        协议格式
+      </a></span> <span class="next"><a href="/fe-notes/base/np/http/status-code.html">
+        状态码
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-notes/assets/js/app.184c0e15.js" defer></script><script src="/fe-notes/assets/js/2.7dd7a667.js" defer></script><script src="/fe-notes/assets/js/25.39958e42.js" defer></script>
+  </body>
+</html>
